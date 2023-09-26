@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>serenity</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="./img/sublogo.png" type="image/x-icon">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+
+		img {
+			vertical-align: middle;
+		}
+
+		.fixed_box {
+			position: fixed;
+			bottom: 40px;
+			right: 30px;
+			width: 40px;
+		}
+
+		#top {
+			max-width: 1320px;
+			margin: 0 auto;
+			padding: 100px;
+		}
+
+		#top img {
+			width: 100%;
+			display: block;
+		}
+
+		body {
+			background-color: #fff7fc;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="top">
+		<img src="./img/img1.jpg" class="guide1">
+		<img src="./img/img2.jpg" class="guide1">
+		<img src="./img/img3.jpg" class="guide1">
+		<img src="./img/img4.jpg" class="guide1">
+		<img src="./img/img5.jpg" class="guide1">
+		<img src="./img/img6.jpg" class="guide1">
+		<img src="./img/img7.jpg" class="guide1">
+		<img src="./img/img8.jpg" class="guide1">
+		<img src="./img/img9.jpg" class="guide1">
+		<img src="./img/img10.jpg" class="guide1">
+		<img src="./img/img11.jpg" class="guide1">
+		<img src="./img/img12.jpg" class="guide1">
+		<img src="./img/img13.jpg" class="guide1">
+		<img src="./img/img14.jpg" class="guide1">
+		<img src="./img/img15.jpg" class="guide1">
+		<img src="./img/img16.jpg" class="guide1">
+		<img src="./img/img17.jpg" class="guide1">
+		<img src="./img/img18.jpg" class="guide1">
+		<img src="./img/img19.jpg" class="guide1">
+		<img src="./img/img20.jpg" class="guide1">
+
+	</div>
+
+
+
+	<!--이동시 부드럽게 이동시키기 위해 추가한 구문 시작. script쪽 전부 삭제가능.-->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script>
+		$(function () {
+			$('a[href*="#"]:not([href="#"])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html, body').animate({
+							scrollTop: target.offset().top
+						}, 500);//움직이는 시간 조정
+						return false;
+					}
+				}
+			});
+		});
+	</script>
+	<!--이동시 부드럽게 이동시키기 위해 추가한 구문 끝. 삭제가능.-->
+</body>
+
+</html>
